@@ -1,0 +1,12 @@
+.inactive-user-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+  padding: 0 25px;
+
+  h1 {
+    font-size: 42px;
+  }
+}

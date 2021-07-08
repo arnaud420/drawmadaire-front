@@ -1,0 +1,59 @@
+#header {
+  font-family: 'Ribeye Marrow', Arial, Helvetica, sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  font-size: 50px;
+  margin-bottom: 20px;
+  width: 100%;
+  #arrow-back {
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    img {
+      width: 60px;
+    } 
+  } 
+  span {
+    margin-left: 20px;
+  }
+  #logo {
+    width: 60px;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #header {
+    font-size: 30px;
+    #arrow-back img {
+      width: 40px;
+    }
+    #logo {
+      width: 40px;
+    }
+    span {
+      margin-left: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  #header {
+    font-size: 25px;
+    #arrow-back {
+      left: -35px;
+      img {
+        width: 30px;
+      } 
+    }
+    #logo {
+      width: 30px;
+    }
+    span {
+      margin-left: 10px;
+    }
+  }
+}

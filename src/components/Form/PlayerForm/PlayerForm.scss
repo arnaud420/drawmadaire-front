@@ -1,0 +1,12 @@
+.player-form {
+  p {
+    width: 50%;
+    margin: 10px auto 0;
+
+    @media only screen and (max-width: 768px) {
+      width: 90%;
+      font-size: 12px;
+    }
+  }
+}
+

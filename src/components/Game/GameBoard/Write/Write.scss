@@ -1,0 +1,10 @@
+#game-board-container {
+  &.draw {
+    justify-content: flex-start;
+  }
+}
+
+.indication {
+  color: white;
+}
+

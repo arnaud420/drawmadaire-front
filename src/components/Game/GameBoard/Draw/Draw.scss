@@ -1,0 +1,42 @@
+@import '../../../../config/colors';
+
+.board-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media only screen and (max-width: 768px) {
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: initial;
+  }
+
+  #validate-button {
+    height: 40px;
+    background-color: $light-blue;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: medium;
+    box-shadow: 0 0 0 0 $light-blue;
+    -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none;
+    &.clicked {
+      animation: pulse .8s cubic-bezier(0.66, 0, 0, 1);
+      -webkit-animation: pulse .8s cubic-bezier(0.66, 0, 0, 1);
+      -moz-animation: pulse .8s cubic-bezier(0.66, 0, 0, 1);
+      -ms-animation: pulse .8s cubic-bezier(0.66, 0, 0, 1);
+    }
+    &:focus {
+      outline: none;
+    }
+    @media only screen and (max-width: 900px) {
+      top: unset;
+      left: unset;
+      margin-top: 20px;
+      position: unset;
+      transform: unset;
+    }
+  }
+}
+

@@ -1,0 +1,22 @@
+.avatar {
+  background-color: white;
+  border-radius: 50%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  .head {
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -10%;
+  }
+  .mouth {
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    bottom: -10%;
+    left: -10%;
+  }
+}

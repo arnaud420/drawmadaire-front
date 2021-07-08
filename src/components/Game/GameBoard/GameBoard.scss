@@ -1,0 +1,16 @@
+#game-board-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media only screen and (min-width: 768px) {
+    max-height: 60vw;
+  }
+  @media only screen and (max-width: 900px) {
+    margin-bottom: 40px;
+  }
+  @media only screen and (max-width: 768px) {
+    height: 120vw;
+  }
+}
+

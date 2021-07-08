@@ -1,0 +1,19 @@
+html {
+  background-color: #002F6C;
+}
+
+body {
+  margin: 0;
+  font-family: 'Righteous', Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root > div {
+  width: 100%;
+}

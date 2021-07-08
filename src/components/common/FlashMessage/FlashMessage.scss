@@ -1,0 +1,39 @@
+@import '../../../config/colors';
+
+#flash-message {
+  width: 90%!important;
+  padding: 10px 25px;
+  background-color: white;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 5px;
+  position: absolute;
+  top: -100px;
+  opacity: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all .5s ease;
+  z-index: 999;
+
+  &.active {
+    top: 20px;
+    opacity: 1;
+    transition: all .5s ease;
+  }
+
+  &.danger { border-color: red }
+  &.warning { border-color: orange }
+  &.info { border-color: $light-blue }
+  &.success { border-color: green }
+
+  img {
+    width: 30px;
+    cursor: pointer;
+  }
+
+  span {
+    display: flex;
+  }
+}
+

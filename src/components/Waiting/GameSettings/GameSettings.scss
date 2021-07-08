@@ -1,0 +1,122 @@
+@import '../../../config/colors.scss';
+
+#settings {
+  #settings-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @media only screen and (max-width: 380px) {
+      flex-direction: column;
+    }
+    div, button {
+      flex: 0.2;
+      &#share {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        align-items: center;
+        background-color: white;
+        font-family: inherit;
+        font-size: 100%;
+        margin: 0;
+        -webkit-appearance: button;
+        border: 0;
+        color: #002F6C;
+        &:active {
+          color: black;
+        }
+        &.fade {
+          animation: fade-in-keyframes 1s;
+        }
+        img {
+          width: 35px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+    h2 {
+      flex: 0.6;
+      text-align: center;
+    }
+  }
+  #draw-time-container {
+    #draw-time {
+      display: flex;
+      align-items: center;
+      #draw-time-input {
+        padding: 5px 10px;
+        border: 1px solid black;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .time {
+          &:first-child {
+            margin-right: 5px;
+          }
+          &:last-child {
+            margin-left: 5px;
+          }
+          &:hover {
+            cursor: pointer;
+          }
+          .Dropdown-menu {
+            position: absolute;
+            background-color: white;
+            padding: 10px 15px;
+            border-radius: 10px;
+            margin-left: -15px;
+            border: 1px solid black;
+            max-height: 100px;
+            overflow-y: scroll;
+            margin-top: 3px;
+          }
+        }
+        &.guest {
+          .time {
+            color: lightgray;
+            &:hover {
+              cursor: unset;
+            }
+          }
+        }
+      }
+    }
+  }
+  #draw-type, #draw-hint {
+    display: flex;
+    flex-direction: column;
+  }
+  #draw-type-container, #draw-hint-container {
+   margin: 20px 0;
+  }
+  .label {
+    margin-left: 6px
+  }
+  #start-game-btn {
+    background-color: $light-blue;
+    padding: 10px 25px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    font-family: 'Righteous', Arial, Helvetica, sans-serif;
+    margin: auto;
+    display: block;
+  }
+  #waiting-for-owner {
+    display: block;
+    text-align: center;
+    font-size: large;
+    padding: 10px 25px;
+    color: $blue;
+  }
+  button:active.fade {
+    animation: fade-in-keyframes 1s;
+  }
+}
+@keyframes fade-in-keyframes {
+  from {opacity: 0.5}
+  to {opacity: 1}
+}
+

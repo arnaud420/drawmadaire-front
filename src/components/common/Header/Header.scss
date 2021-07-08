@@ -1,0 +1,47 @@
+#header {
+  font-family: 'Ribeye Marrow', Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  margin-bottom: 20px;
+  span {
+    margin-left: 20px;
+  }
+  #logo {
+    width: 60px;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #header {
+    font-size: 30px;
+    #logo {
+      width: 40px;
+    }
+    span {
+      margin-left: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  #header {
+    font-size: 25px;
+    #logo {
+      width: 30px;
+    }
+    span {
+      margin-left: 10px;
+    }
+  }
+}
+
+.color-white {
+  color: white;
+}
+
+.color-black {
+  color: black;
+}

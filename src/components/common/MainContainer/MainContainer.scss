@@ -1,0 +1,27 @@
+@import '../../../config/colors.scss';
+
+#full-screen {
+  height: 100vh;
+  max-height: 100vh;
+  min-height: 100vh;
+  @media only screen and (max-width: 900px) {
+    height: unset;
+    max-height: unset;
+  }
+  width: 100vw;
+  background-color: $blue;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  #main-container {
+    padding: 20px;
+    flex: 1;
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Righteous', Arial, Helvetica, sans-serif;
+    button {
+      font-family: 'Righteous', Arial, Helvetica, sans-serif;
+    }
+  }
+}

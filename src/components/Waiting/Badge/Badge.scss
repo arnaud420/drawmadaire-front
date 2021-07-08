@@ -1,0 +1,13 @@
+.badge {
+  display: flex;
+  flex-direction: column;
+  font-size: x-small;
+  align-items: center;
+  justify-content: center;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+  img {
+    width: 16px;
+  }
+}

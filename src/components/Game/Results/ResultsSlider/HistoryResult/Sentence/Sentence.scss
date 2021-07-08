@@ -1,0 +1,15 @@
+.sentence-content {
+  background: white;
+  position: relative;
+  padding: 8px 8px 8px 32px;
+  border-radius: 8px;
+  text-align: left;
+  margin-bottom: 50px;
+
+  .avatar {
+    position: absolute;
+    left: -20px;
+    top: -4px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+}

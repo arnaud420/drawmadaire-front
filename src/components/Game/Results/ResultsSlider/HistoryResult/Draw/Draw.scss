@@ -1,0 +1,35 @@
+.draw-results {
+  margin-bottom: 50px;
+  position: relative;
+  width: 100%;
+  min-height: 50px;
+
+  .avatar {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    left: -20px;
+    top: -20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+
+  .draw-results-draw {
+    position: relative;
+    width: 100%;
+
+    .canvas {
+      width: 100%;
+    }
+
+    .badges-container {
+      position: absolute;
+      bottom: -27px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      color: white;
+      height: 40px;
+    }
+  }
+}
+

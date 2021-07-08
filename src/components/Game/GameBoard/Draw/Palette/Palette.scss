@@ -1,0 +1,207 @@
+@import '../../../../../config/colors.scss';
+
+#palette-container {
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media only screen and (max-width: 768px) {
+    height: initial;
+  }
+
+  .color {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    box-shadow: 0 0 0 0 $brown;
+    -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none;
+    transition:border .3s ease;
+    &.active {
+      border: 5px solid $brown;
+      width: 30px;
+      height: 30px;
+      animation: pulse .8s 1 cubic-bezier(0.66, 0, 0, 1);
+      -webkit-animation: pulse .8s 1 cubic-bezier(0.66, 0, 0, 1);
+      -moz-animation: pulse .8s 1 cubic-bezier(0.66, 0, 0, 1);
+      -ms-animation: pulse .8s 1 cubic-bezier(0.66, 0, 0, 1);
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+  #brush-container {
+    position: relative;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+    #brush-selector-container {
+      position: absolute;
+      background-color: $light-blue;
+      width: 140px;
+      height: 70px;
+      top: -75px;
+      z-index: 500;
+      left: 0;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &.fadein, &.fadeout {
+        opacity: 0;
+        -moz-transition: opacity .3s ease-in-out;
+        -o-transition: opacity .3s ease-in-out;
+        -webkit-transition: opacity .3s ease-in-out;
+        transition: opacity .3s ease-in-out;
+      }
+      &.fadein {
+          opacity: 1;
+      }
+      #brush-size-triangle {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 20px 100px;
+        border-color: transparent transparent white transparent;
+        margin-bottom: 10px;
+      }
+      input[type=range] {
+        width: 100px;
+        margin: 5px 0;
+        background-color: transparent;
+        -webkit-appearance: none;
+      }
+      input[type=range]:focus {
+        outline: none;
+      }
+      input[type=range]::-webkit-slider-runnable-track {
+        background: $blue;
+        border: 0;
+        border-radius: 25px;
+        width: 100%;
+        height: 5px;
+        cursor: pointer;
+      }
+      input[type=range]::-webkit-slider-thumb {
+        margin-top: -5px;
+        width: 15px;
+        height: 15px;
+        background: white;
+        border-radius: 50%;
+        cursor: pointer;
+        -webkit-appearance: none;
+      }
+      input[type=range]:focus::-webkit-slider-runnable-track {
+        background: $blue;
+      }
+      input[type=range]::-moz-range-track {
+        background: $blue;
+        border: 0;
+        border-radius: 25px;
+        width: 100%;
+        height: 5px;
+        cursor: pointer;
+      }
+      input[type=range]::-moz-range-thumb {
+        width: 15px;
+        height: 15px;
+        background: white;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      input[type=range]::-ms-track {
+        background: transparent;
+        border-color: transparent;
+        border-width: 5px 0;
+        color: transparent;
+        width: 100%;
+        height: 5px;
+        cursor: pointer;
+      }
+      input[type=range]::-ms-fill-lower {
+        background: $blue;
+        border: 0;
+        border-radius: 50%;
+      }
+      input[type=range]::-ms-fill-upper {
+        background: $blue;
+        border: 0;
+        border-radius: 50%;
+      }
+      input[type=range]::-ms-thumb {
+        width: 15px;
+        height: 15px;
+        background: white;
+        border: 1px solid black;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-top: 0px;
+        /*Needed to keep the Edge thumb centred*/
+      }
+      input[type=range]:focus::-ms-fill-lower {
+        background: $blue;
+      }
+      input[type=range]:focus::-ms-fill-upper {
+        background: $blue;
+      }
+      @supports (-ms-ime-align:auto) {
+        /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+        input[type=range] {
+          margin: 0;
+          /*Edge starts the margin from the thumb, not the track as other browsers do*/
+        }
+      }
+    }
+  }
+  .action-item {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    cursor: pointer;
+    img {
+      width: 20px;
+    }
+    &:last-child {
+      /* Trash icon */
+      background-color: #C81B1C;
+    }
+    &:not(:last-child) {
+      /* Cancel icon */
+      background-color: #E1B208;
+      margin-right: 10px;
+    }
+  }
+  &.disabled {
+    .palette-item {
+      cursor: default;
+      filter: grayscale(1);
+    }
+  }
+}
+
+@-webkit-keyframes pulse {to {box-shadow: 0 0 0 10px rgba(232, 76, 61, 0);}}
+@-moz-keyframes pulse {to {box-shadow: 0 0 0 10px rgba(232, 76, 61, 0);}}
+@-ms-keyframes pulse {to {box-shadow: 0 0 0 10px rgba(232, 76, 61, 0);}}
+@keyframes pulse {to {box-shadow: 0 0 0 10px rgba(232, 76, 61, 0);}}
+
